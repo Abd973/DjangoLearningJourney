@@ -14,5 +14,5 @@ class Product(models.Model):
     
     class Meta:
         verbose_name = 'My_Product'
-        ordering = ['name']
+        ordering = ['price']
     
