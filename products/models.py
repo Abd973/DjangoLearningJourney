@@ -10,7 +10,7 @@ class Product(models.Model):
     active = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.name
+        return self.content
     
     class Meta:
         verbose_name = 'My_Product'
