@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{% for x in pro %}
-<h1> {{x.name}}</h1>
+{% for x in pro%}
+<p>
+    {{x.name}}
+    {{x.price}}
+    <img src="{{x.image.url}}" alt="">
+</p>
 {% endfor %}
 {% endblock content %}

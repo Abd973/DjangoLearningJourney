@@ -3,6 +3,10 @@
 
 {% block content%}
 
-mmmmmmmmmmmm
+<form method="post">
+    {% csrf_token %}
+    {{LF}}
+    <input type="submit" value="save">
+</form>
 
 {% endblock content%}

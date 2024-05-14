@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import Login
+from .forms import LoginForm
 
 # Create your views here.
 
@@ -7,4 +9,12 @@ def index(request):
     return render(request, 'pages/index.html', x)
 
 def about(request):
-    return render(request, 'pages/about.html')
+    if request.method == 'POST':
+        dataform = LoginForm(request.POST )
+        if dataform.is_valid():
+            dataform.save()
+    
+    return render(request, 'pages/about.html', {'LF' : LoginForm})
+     
+     
+    
